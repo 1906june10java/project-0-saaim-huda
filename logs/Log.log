@@ -1,0 +1,974 @@
+2019-06-20 09:27:13 ERROR ConnectionUtil:26 - Could not connect.
+java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@database-1.c7tahx74pqbv.us-east-2.rds.amazonaws.com:1521:ORCL
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:18)
+	at com.revature.util.ConnectionUtil.main(ConnectionUtil.java:23)
+2019-06-20 09:27:55 ERROR ConnectionUtil:26 - Could not connect.
+java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@database-1.c7tahx74pqbv.us-east-2.rds.amazonaws.com:1521:ORCL
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:18)
+	at com.revature.util.ConnectionUtil.main(ConnectionUtil.java:23)
+2019-06-20 09:28:37 ERROR ConnectionUtil:26 - Could not connect.
+java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@database-1.c7tahx74pqbv.us-east-2.rds.amazonaws.com:1521:ORCL
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:18)
+	at com.revature.util.ConnectionUtil.main(ConnectionUtil.java:23)
+2019-06-20 13:44:12 ERROR ConnectionUtil:27 - Could not connect.
+java.sql.SQLException
+	at com.revature.util.ConnectionUtil.main(ConnectionUtil.java:25)
+2019-06-20 13:45:01 INFO  ConnectionUtil:24 - Connection Successful
+2019-06-20 22:03:53 INFO  ConnectionUtil:24 - Connection Successful
+2019-06-21 12:52:22 TRACE AccountRepositoryJdbc:23 - Entering create method with parameter: Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 12:52:43 TRACE AccountRepositoryJdbc:23 - Entering create method with parameter: Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 12:55:13 TRACE AccountRepositoryJdbc:23 - Entering create method with parameter: Account [username=umama, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 12:55:14 TRACE AccountRepositoryJdbc:54 - Entering find username by username with parametersaaim
+2019-06-21 12:55:15 INFO  AccountRepositoryJdbc:105 - 
+2019-06-21 12:55:15 TRACE AccountRepositoryJdbc:78 - Entering all username
+2019-06-21 12:55:15 INFO  AccountRepositoryJdbc:106 - [Account [username=umama, password=password, balance=100, withdraw=100, deposit=20]]
+2019-06-21 12:55:58 TRACE AccountRepositoryJdbc:23 - Entering create method with parameter: Account [username=this is new, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 12:55:59 TRACE AccountRepositoryJdbc:54 - Entering find username by username with parametersaaim
+2019-06-21 12:55:59 INFO  AccountRepositoryJdbc:105 - 
+2019-06-21 12:55:59 TRACE AccountRepositoryJdbc:78 - Entering all username
+2019-06-21 12:56:00 INFO  AccountRepositoryJdbc:106 - [Account [username=umama, password=password, balance=100, withdraw=100, deposit=20], Account [username=this is new, password=password, balance=100, withdraw=100, deposit=20]]
+2019-06-21 12:56:30 TRACE AccountRepositoryJdbc:23 - Entering create method with parameter: Account [username=umama, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 12:56:31 ERROR AccountRepositoryJdbc:41 - Could not create method with parameter.
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANK_DB.SYS_C005192) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.AccountRepositoryJdbc.create(AccountRepositoryJdbc.java:35)
+	at com.revature.repository.AccountRepositoryJdbc.main(AccountRepositoryJdbc.java:104)
+2019-06-21 12:56:31 TRACE AccountRepositoryJdbc:54 - Entering find username by username with parametersaaim
+2019-06-21 12:56:32 INFO  AccountRepositoryJdbc:105 - 
+2019-06-21 12:56:32 TRACE AccountRepositoryJdbc:78 - Entering all username
+2019-06-21 12:56:32 INFO  AccountRepositoryJdbc:106 - [Account [username=umama, password=password, balance=100, withdraw=100, deposit=20], Account [username=this is new, password=password, balance=100, withdraw=100, deposit=20]]
+2019-06-21 13:33:47 TRACE AccountRepositoryJdbc:54 - Entering find username by username with parametersaaim
+2019-06-21 13:33:47 ERROR AccountRepositoryJdbc:41 - Could not create method with parameter.
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANK_DB.SYS_C005192) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.AccountRepositoryJdbc.create(AccountRepositoryJdbc.java:35)
+	at com.revature.repository.AccountRepositoryJdbc.main(AccountRepositoryJdbc.java:104)
+2019-06-21 13:33:47 TRACE AccountRepositoryJdbc:54 - Entering find username by username with parametersaaim
+2019-06-21 13:33:48 INFO  AccountRepositoryJdbc:105 - Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 13:33:48 TRACE AccountRepositoryJdbc:78 - Entering all username
+2019-06-21 13:33:48 INFO  AccountRepositoryJdbc:105 - Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 13:33:48 TRACE AccountRepositoryJdbc:78 - Entering all username
+2019-06-21 13:33:48 INFO  AccountRepositoryJdbc:106 - [Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20], Account [username=umama, password=password, balance=100, withdraw=100, deposit=20], Account [username=this is new, password=password, balance=100, withdraw=100, deposit=20]]
+2019-06-21 13:33:48 INFO  AccountRepositoryJdbc:106 - [Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20], Account [username=umama, password=password, balance=100, withdraw=100, deposit=20], Account [username=this is new, password=password, balance=100, withdraw=100, deposit=20]]
+2019-06-21 14:15:53 TRACE AccountRepositoryJdbc:23 - Entering create method with parameter: Account [username=umama, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 14:15:55 ERROR AccountRepositoryJdbc:41 - Could not create method with parameter.
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANK_DB.SYS_C005192) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.AccountRepositoryJdbc.create(AccountRepositoryJdbc.java:35)
+	at com.revature.repository.AccountRepositoryJdbc.main(AccountRepositoryJdbc.java:104)
+2019-06-21 14:15:55 TRACE AccountRepositoryJdbc:54 - Entering find username by username with parameterumama
+2019-06-21 14:15:56 INFO  AccountRepositoryJdbc:105 - Account [username=umama, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 14:15:56 TRACE AccountRepositoryJdbc:78 - Entering all username
+2019-06-21 14:15:56 INFO  AccountRepositoryJdbc:106 - [Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20], Account [username=umama, password=password, balance=100, withdraw=100, deposit=20], Account [username=this is new, password=password, balance=100, withdraw=100, deposit=20]]
+2019-06-21 14:43:54 TRACE AccountRepositoryJdbc:23 - Entering create method with parameter: Account [username=umama, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 14:43:56 ERROR AccountRepositoryJdbc:41 - Could not create method with parameter.
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANK_DB.SYS_C005192) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.AccountRepositoryJdbc.create(AccountRepositoryJdbc.java:35)
+	at com.revature.repository.AccountRepositoryJdbc.main(AccountRepositoryJdbc.java:104)
+2019-06-21 14:43:56 TRACE AccountRepositoryJdbc:54 - Entering find username by username with parameterumama
+2019-06-21 14:43:57 INFO  AccountRepositoryJdbc:105 - Account [username=umama, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 14:43:57 TRACE AccountRepositoryJdbc:78 - Entering all username
+2019-06-21 14:43:58 INFO  AccountRepositoryJdbc:107 - [Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20], Account [username=umama, password=password, balance=100, withdraw=100, deposit=20], Account [username=this is new, password=password, balance=100, withdraw=100, deposit=20]]
+2019-06-21 14:43:58 TRACE AccountRepositoryJdbc:78 - Entering all username
+2019-06-21 14:43:58 INFO  AccountRepositoryJdbc:111 - [Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20], Account [username=umama, password=password, balance=100, withdraw=100, deposit=20], Account [username=this is new, password=password, balance=100, withdraw=100, deposit=20]]
+2019-06-21 14:43:58 INFO  AccountRepositoryJdbc:111 - [Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20], Account [username=umama, password=password, balance=100, withdraw=100, deposit=20], Account [username=this is new, password=password, balance=100, withdraw=100, deposit=20]]
+2019-06-21 14:43:58 INFO  AccountRepositoryJdbc:111 - [Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20], Account [username=umama, password=password, balance=100, withdraw=100, deposit=20], Account [username=this is new, password=password, balance=100, withdraw=100, deposit=20]]
+2019-06-21 14:44:33 TRACE AccountRepositoryJdbc:23 - Entering create method with parameter: Account [username=umama, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 14:44:35 ERROR AccountRepositoryJdbc:41 - Could not create method with parameter.
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANK_DB.SYS_C005192) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.AccountRepositoryJdbc.create(AccountRepositoryJdbc.java:35)
+	at com.revature.repository.AccountRepositoryJdbc.main(AccountRepositoryJdbc.java:104)
+2019-06-21 14:44:35 TRACE AccountRepositoryJdbc:54 - Entering find username by username with parameterumama
+2019-06-21 14:44:36 INFO  AccountRepositoryJdbc:105 - Account [username=umama, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 14:44:36 TRACE AccountRepositoryJdbc:78 - Entering all username
+2019-06-21 14:44:36 INFO  AccountRepositoryJdbc:107 - [Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20], Account [username=umama, password=password, balance=100, withdraw=100, deposit=20], Account [username=this is new, password=password, balance=100, withdraw=100, deposit=20]]
+2019-06-21 14:44:36 TRACE AccountRepositoryJdbc:78 - Entering all username
+2019-06-21 14:44:37 INFO  AccountRepositoryJdbc:111 - Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 14:44:37 INFO  AccountRepositoryJdbc:111 - Account [username=umama, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 14:44:37 INFO  AccountRepositoryJdbc:111 - Account [username=this is new, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 14:44:52 TRACE AccountRepositoryJdbc:23 - Entering create method with parameter: Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 14:44:54 ERROR AccountRepositoryJdbc:41 - Could not create method with parameter.
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANK_DB.SYS_C005192) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.AccountRepositoryJdbc.create(AccountRepositoryJdbc.java:35)
+	at com.revature.repository.AccountRepositoryJdbc.main(AccountRepositoryJdbc.java:104)
+2019-06-21 14:44:54 TRACE AccountRepositoryJdbc:54 - Entering find username by username with parameterumama
+2019-06-21 14:44:55 INFO  AccountRepositoryJdbc:105 - Account [username=umama, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 14:44:55 TRACE AccountRepositoryJdbc:78 - Entering all username
+2019-06-21 14:44:55 INFO  AccountRepositoryJdbc:107 - [Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20], Account [username=umama, password=password, balance=100, withdraw=100, deposit=20], Account [username=this is new, password=password, balance=100, withdraw=100, deposit=20]]
+2019-06-21 14:44:55 TRACE AccountRepositoryJdbc:78 - Entering all username
+2019-06-21 14:44:56 INFO  AccountRepositoryJdbc:111 - Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 14:44:56 INFO  AccountRepositoryJdbc:111 - Account [username=umama, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 14:44:56 INFO  AccountRepositoryJdbc:111 - Account [username=this is new, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 14:45:34 TRACE AccountRepositoryJdbc:23 - Entering create method with parameter: Account [username=ALEX, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 14:45:36 TRACE AccountRepositoryJdbc:54 - Entering find username by username with parameterumama
+2019-06-21 14:45:37 INFO  AccountRepositoryJdbc:105 - Account [username=umama, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 14:45:37 TRACE AccountRepositoryJdbc:78 - Entering all username
+2019-06-21 14:45:37 INFO  AccountRepositoryJdbc:107 - [Account [username=ALEX, password=password, balance=100, withdraw=100, deposit=20], Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20], Account [username=umama, password=password, balance=100, withdraw=100, deposit=20], Account [username=this is new, password=password, balance=100, withdraw=100, deposit=20]]
+2019-06-21 14:45:37 TRACE AccountRepositoryJdbc:78 - Entering all username
+2019-06-21 14:45:38 INFO  AccountRepositoryJdbc:111 - Account [username=ALEX, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 14:45:38 INFO  AccountRepositoryJdbc:111 - Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 14:45:38 INFO  AccountRepositoryJdbc:111 - Account [username=umama, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 14:45:38 INFO  AccountRepositoryJdbc:111 - Account [username=this is new, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 19:58:03 TRACE AccountRepositoryJdbc:23 - Entering create method with parameter: Account [username=ALEX, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 19:58:05 ERROR AccountRepositoryJdbc:41 - Could not create method with parameter.
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANK_DB.SYS_C005192) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.AccountRepositoryJdbc.create(AccountRepositoryJdbc.java:35)
+	at com.revature.repository.AccountRepositoryJdbc.main(AccountRepositoryJdbc.java:104)
+2019-06-21 19:58:05 TRACE AccountRepositoryJdbc:54 - Entering find username by username with parameterumama
+2019-06-21 19:58:05 INFO  AccountRepositoryJdbc:105 - Account [username=umama, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 19:58:05 TRACE AccountRepositoryJdbc:78 - Entering all username
+2019-06-21 19:58:06 INFO  AccountRepositoryJdbc:111 - Account [username=ALEX, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 19:58:06 INFO  AccountRepositoryJdbc:111 - Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 19:58:06 INFO  AccountRepositoryJdbc:111 - Account [username=umama, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-21 19:58:06 INFO  AccountRepositoryJdbc:111 - Account [username=this is new, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-22 09:03:51 TRACE AccountRepositoryJdbc:23 - Entering create method with parameter: Account [username=ALEX, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-22 09:03:53 ERROR AccountRepositoryJdbc:41 - Could not create method with parameter.
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANK_DB.SYS_C005192) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.AccountRepositoryJdbc.create(AccountRepositoryJdbc.java:35)
+	at com.revature.Main.main(Main.java:32)
+2019-06-22 09:03:53 TRACE AccountRepositoryJdbc:54 - Entering find username by username with parameterumama
+2019-06-22 09:03:53 INFO  AccountRepositoryJdbc:33 - Account [username=umama, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-22 09:03:53 TRACE AccountRepositoryJdbc:78 - Entering all username
+2019-06-22 09:03:53 INFO  AccountRepositoryJdbc:39 - Account [username=ALEX, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-22 09:03:53 INFO  AccountRepositoryJdbc:39 - Account [username=saaim, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-22 09:03:53 INFO  AccountRepositoryJdbc:39 - Account [username=umama, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-22 09:03:53 INFO  AccountRepositoryJdbc:39 - Account [username=this is new, password=password, balance=100, withdraw=100, deposit=20]
+2019-06-23 10:33:59 TRACE AccountRepositoryJdbc:23 - Entering Logging functionality
+2019-06-23 10:38:27 TRACE AccountRepositoryJdbc:23 - Entering Logging functionality
+2019-06-23 11:43:48 TRACE AccountRepositoryJdbc:46 - Entering Logging functionality
+2019-06-23 11:50:09 TRACE AccountRepositoryJdbc:46 - Entering Logging functionality
+2019-06-23 11:50:17 ERROR AccountRepositoryJdbc:77 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:59)
+	at com.revature.Main.showMainMenu(Main.java:46)
+	at com.revature.Main.main(Main.java:20)
+2019-06-23 12:12:29 TRACE AccountRepositoryJdbc:46 - Entering Logging functionality
+2019-06-23 12:12:45 ERROR AccountRepositoryJdbc:77 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:59)
+	at com.revature.Main.showMainMenu(Main.java:46)
+	at com.revature.Main.main(Main.java:20)
+2019-06-23 12:15:22 ERROR AccountRepositoryJdbc:77 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:59)
+	at com.revature.Main.showMainMenu(Main.java:46)
+	at com.revature.Main.main(Main.java:20)
+2019-06-23 12:16:08 ERROR AccountRepositoryJdbc:77 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:59)
+	at com.revature.Main.showMainMenu(Main.java:46)
+	at com.revature.Main.main(Main.java:20)
+2019-06-23 15:46:35 ERROR AccountRepositoryJdbc:81 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:63)
+	at com.revature.Main.showMainMenu(Main.java:47)
+	at com.revature.Main.main(Main.java:20)
+2019-06-23 15:52:19 ERROR AccountRepositoryJdbc:81 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:63)
+	at com.revature.Main.showMainMenu(Main.java:47)
+	at com.revature.Main.main(Main.java:20)
+2019-06-24 11:45:23 ERROR AccountRepositoryJdbc:78 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-24 12:48:52 ERROR AccountRepositoryJdbc:78 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-24 12:57:32 ERROR AccountRepositoryJdbc:78 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-24 12:57:49 ERROR AccountRepositoryJdbc:78 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-24 12:58:22 ERROR AccountRepositoryJdbc:78 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-24 12:58:36 ERROR AccountRepositoryJdbc:78 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-24 12:58:45 ERROR AccountRepositoryJdbc:78 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-24 13:00:02 ERROR AccountRepositoryJdbc:78 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-24 13:19:57 ERROR AccountRepositoryJdbc:78 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-24 18:22:53 ERROR AccountRepositoryJdbc:78 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-24 18:23:36 ERROR AccountRepositoryJdbc:78 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-24 18:46:33 ERROR AccountRepositoryJdbc:78 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-24 22:18:01 ERROR AccountRepositoryJdbc:52 - login cannot be created
+java.sql.SQLException: ResultSet.next was not called
+	at oracle.jdbc.driver.GeneratedScrollableResultSet.getFloat(GeneratedScrollableResultSet.java:472)
+	at oracle.jdbc.driver.GeneratedResultSet.getFloat(GeneratedResultSet.java:1339)
+	at com.revature.repository.AccountRepositoryJdbc.balance(AccountRepositoryJdbc.java:163)
+	at com.revature.repository.AccountRepositoryJdbc.showMenu(AccountRepositoryJdbc.java:96)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:69)
+	at com.revature.Main.showMainMenu(Main.java:49)
+	at com.revature.Main.main(Main.java:20)
+2019-06-24 22:58:17 ERROR AccountRepositoryJdbc:51 - login cannot be created
+java.sql.SQLRecoverableException: IO Error: Socket read timed out
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:715)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:385)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:18)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:55)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+Caused by: oracle.net.ns.NetException: Socket read timed out
+	at oracle.net.ns.Packet.receive(Packet.java:350)
+	at oracle.net.ns.NSProtocolStream.negotiateConnection(NSProtocolStream.java:153)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:263)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+	... 10 more
+2019-06-24 22:58:43 ERROR AccountRepositoryJdbc:51 - login cannot be created
+java.sql.SQLRecoverableException: IO Error: Socket read timed out
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:715)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:385)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:18)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:55)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+Caused by: oracle.net.ns.NetException: Socket read timed out
+	at oracle.net.ns.Packet.receive(Packet.java:350)
+	at oracle.net.ns.NSProtocolStream.negotiateConnection(NSProtocolStream.java:153)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:263)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+	... 10 more
+2019-06-24 22:59:19 ERROR AccountRepositoryJdbc:51 - login cannot be created
+java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:715)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:385)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:18)
+	at com.revature.repository.AccountRepositoryJdbc.balance(AccountRepositoryJdbc.java:161)
+	at com.revature.repository.AccountRepositoryJdbc.showMenu(AccountRepositoryJdbc.java:98)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:69)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+	... 12 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+	... 17 more
+2019-06-24 23:00:03 ERROR AccountRepositoryJdbc:51 - login cannot be created
+java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:673)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:715)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:385)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:30)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:564)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:18)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:55)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:445)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:464)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:594)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:229)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1360)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:486)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:162)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:133)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:411)
+	... 15 more
+2019-06-25 06:46:13 ERROR AccountRepositoryJdbc:78 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-25 06:52:14 ERROR AccountRepositoryJdbc:78 - username not found
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-25 06:54:57 ERROR AccountRepositoryJdbc:51 - login cannot be created
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-25 06:55:29 ERROR AccountRepositoryJdbc:51 - login cannot be created
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-25 06:56:36 ERROR AccountRepositoryJdbc:51 - login cannot be created
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-25 06:58:32 ERROR AccountRepositoryJdbc:51 - login cannot be created
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-25 07:02:51 ERROR AccountRepositoryJdbc:51 - login cannot be created
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-25 07:05:59 ERROR AccountRepositoryJdbc:51 - login cannot be created
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-25 07:12:51 ERROR AccountRepositoryJdbc:51 - login cannot be created
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-25 07:13:35 ERROR AccountRepositoryJdbc:51 - login cannot be created
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-25 07:14:48 ERROR AccountRepositoryJdbc:51 - login cannot be created
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
+2019-06-25 07:15:49 ERROR AccountRepositoryJdbc:51 - login cannot be created
+java.sql.SQLException: ORA-01008: not all variables bound
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:776)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1034)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
+	at com.revature.Main.showMainMenu(Main.java:48)
+	at com.revature.Main.main(Main.java:20)
