@@ -1,6 +1,5 @@
 package com.revature.repository;
 
-import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -97,10 +96,14 @@ public class AccountRepositoryJdbc implements AccountRepository {
 			switch (selection) {
 			case '1':
 				withdraw(chkUsername, userBalance);
+				break;
 			case '2':
 				balance(chkUsername);
+				break;
 			case '3':
-				deposit();
+				// deposit();
+				newDeposit(chkUsername, userBalance);
+				break;
 			case '4':
 				break;
 			default:
@@ -111,51 +114,115 @@ public class AccountRepositoryJdbc implements AccountRepository {
 		System.out.println("Please Log In to Continue");
 	}
 
+	// ______________________________________________________________________??
 	@Override
 	public void deposit() throws SQLException {
-		CallableStatement cs = null;
-		Connection connection = ConnectionUtil.getConnection();
-		String sql = "";
-		String chkUsername = "";
-		String d_amount = "";
-		Float final_amount = new Float(0.00);
-		Scanner input = new Scanner(System.in);
-		do {
-			System.out.println("Please Confirm your username before proceed:  ");
-			chkUsername = input.nextLine();
-		} while (!(chkUsername.equals(input)));
-		System.out.println("username confirmed");
-		d_amount = input.nextLine();
-		final_amount = new Float(d_amount);
-		sql = "{call deposit (?,?)}";
-		cs = connection.prepareCall(sql);
-		cs.setString(1, chkUsername);
-		cs.setFloat(2, final_amount);
-		cs.execute();
+//		CallableStatement cs = null;
+//		Connection connection = ConnectionUtil.getConnection();
+//		String sql = "";
+//		String chkUsername = "";
+//		String d_amount = "";
+//		Float final_amount = new Float(0.00);
+//		Scanner input = new Scanner(System.in);
+//		do {
+//			System.out.println("Please Confirm your username before proceed:  ");
+//			chkUsername = input.nextLine();
+//		} while (!(chkUsername.equals(input)));
+//		System.out.println("username confirmed");
+//		d_amount = input.nextLine();
+//		final_amount = new Float(d_amount);
+//	//stored procedures begins. ASK FOR HELP 
+//		
+//		
+//		sql = "{call deposit (?,?)}";
+//		cs = connection.prepareCall(sql);
+//		cs.setString(1, chkUsername);
+//		cs.setFloat(2, final_amount);
+//		cs.execute();
 	}
 
-	public static boolean withdraw(String chkUsername, Float userBalance) throws SQLException {
-		CallableStatement cs = null;
-		Connection connection = ConnectionUtil.getConnection();
-		String sql = "";
-		String d_amount = "";
-		Float final_amount = new Float(0.00);
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter amount to withdraw: ");
-		d_amount = input.nextLine();
-		final_amount = new Float(d_amount);
-		if (final_amount.compareTo(userBalance) == 1) {
-			System.out.println("Error: Cannot Exceed Existing Balance.");
-			System.out.println("Enter amount to withdraw: ");
+	// ________________________________________________________________________________________________
 
-		} else {
-			sql = "{call withdraw (?,?)}";
-			cs = connection.prepareCall(sql);
-			cs.setString(1, chkUsername);
-			cs.setFloat(2, final_amount);
-			cs.execute();
+//	public Double deposit(Double d_amount) {
+//		Double amount = 0.0;
+//		System.out.println("Please confirm your username before proceed: ");
+//		Scanner input = new Scanner(System.in);
+//		String chkUsername = input.nextLine();
+//		if (chkUsername.equals(input)) {
+//			System.out.println("Username Confirmed");
+//			System.out.println("Enter the amount to deposit: ");
+//		} else {
+//			System.out.println("username didn't match!");
+//			Main.showMainMenu();
+//		}
+//
+//		return d_amount;
+//
+//	}
+
+	// ________________________________________________________________________________________________//
+
+	public static boolean newDeposit(String chkUsername, Float userBalance) throws SQLException {
+		try (Connection connection = ConnectionUtil.getConnection()) {
+			System.out.println("printing newDeposit " + userBalance);
+			Scanner input = new Scanner(System.in);
+			System.out.print("Confirm your username to continue: ");
+			chkUsername = input.nextLine();
+			System.out.println("Enter amount to deposit");
+			Scanner amountInput = new Scanner(System.in);
+			userBalance = Float.valueOf(amountInput.nextLine());
+			int parameterIndex = 0;
+			String sql = "";
+			sql = "UPDATE ACCOUNT SET A_BALANCE = (A_BALANCE + ?) WHERE A_USERNAME = ?";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setFloat(++parameterIndex, userBalance);
+			statement.setString(++parameterIndex, chkUsername);
+			// statement.executeUpdate();
+			// System.out.println("Amount Deposited " + userBalance);
+
+			if (statement.executeUpdate() > 0) {
+				System.out.println("Amount Deposited" + userBalance);
+				return true;
+			}
+
+		} catch (SQLException e) {
+			// TODO: handle exception
+			System.out.println("catch statement from deposit");
+			return false;
 		}
-		return true;
+		return false;
+	}
+
+	// _______________________________________________________________________________________________//
+	public static boolean withdraw(String chkUsername, Float userBalance) throws SQLException {
+		try (Connection connection = ConnectionUtil.getConnection()) {
+			System.out.println("printing newDeposit " + userBalance);
+			Scanner input = new Scanner(System.in);
+			System.out.print("Confirm your username to continue: ");
+			chkUsername = input.nextLine();
+			System.out.println("Enter amount to deposit");
+			Scanner amountInput = new Scanner(System.in);
+			userBalance = Float.valueOf(amountInput.nextLine());
+			int parameterIndex = 0;
+			String sql = "";
+			sql = "UPDATE ACCOUNT SET A_BALANCE = (A_BALANCE - ?) WHERE A_USERNAME = ?";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setFloat(++parameterIndex, userBalance);
+			statement.setString(++parameterIndex, chkUsername);
+			// statement.executeUpdate();
+			// System.out.println("Amount Deposited " + userBalance);
+
+			if (statement.executeUpdate() > 0) {
+				System.out.println("Amount Deposited" + userBalance);
+				return true;
+			}
+
+		} catch (SQLException e) {
+			// TODO: handle exception
+			System.out.println("catch statement from withdrawal");
+			return false;
+		}
+		return false;
 	}
 
 	public void balance(String chkUsername) throws SQLException {
@@ -170,7 +237,7 @@ public class AccountRepositoryJdbc implements AccountRepository {
 		while (rs.next()) {
 
 			Float balance = rs.getFloat("A_BALANCE");
-			System.out.printf("Your balance is: ", balance);
+			System.out.println("Your balance is: " + balance);
 			account.balance = balance;
 		}
 	}
