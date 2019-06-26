@@ -972,3 +972,30 @@ java.sql.SQLException: ORA-01008: not all variables bound
 	at com.revature.repository.AccountRepositoryJdbc.login(AccountRepositoryJdbc.java:60)
 	at com.revature.Main.showMainMenu(Main.java:48)
 	at com.revature.Main.main(Main.java:20)
+2019-06-26 09:18:40 TRACE AccountRepositoryJdbc:46 - Entering Logging functionality
+2019-06-26 10:51:29 TRACE AccountRepositoryJdbc:46 - Entering Logging functionality
+2019-06-26 10:57:45 TRACE AccountRepositoryJdbc:46 - Entering Logging functionality
+2019-06-26 10:59:53 TRACE AccountRepositoryJdbc:46 - Entering Logging functionality
+2019-06-26 12:08:40 ERROR AccountRepositoryJdbc:41 - Account cannot be created
+java.sql.SQLException: ORA-12899: value too large for column "BANK_DB"."ACCOUNT"."A_USERNAME" (actual: 11, maximum: 10)
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:202)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:45)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:933)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1718)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1678)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:332)
+	at com.revature.repository.AccountRepositoryJdbc.create(AccountRepositoryJdbc.java:40)
+	at com.revature.Main.showMainMenu(Main.java:39)
+	at com.revature.Main.main(Main.java:20)
+2019-06-26 12:09:28 TRACE AccountRepositoryJdbc:46 - Entering Logging functionality
+2019-06-26 12:09:40 TRACE AccountRepositoryJdbc:46 - Entering Logging functionality
+2019-06-26 12:52:51 TRACE AccountRepositoryJdbc:46 - Entering Logging functionality
+2019-06-26 13:00:55 TRACE AccountRepositoryJdbc:46 - Entering Logging functionality

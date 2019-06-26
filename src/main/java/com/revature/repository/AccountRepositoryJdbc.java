@@ -33,7 +33,7 @@ public class AccountRepositoryJdbc implements AccountRepository {
 			userPass2 = input.nextLine();
 		} while (!(userPass.equals(userPass2)));
 		Float initBalance = new Float(0.0);
-		String sql = "INSERT INTO ACCOUNT (A_USERNAME, A_PASSWORD,A_BALANCE) VALUES (' " + userNameInput + " ', '"
+		String sql = "INSERT INTO ACCOUNT (A_USERNAME, A_PASSWORD,A_BALANCE) VALUES ('" + userNameInput + " ', '"
 				+ userPass + "','" + initBalance + "')";
 		Connection connection = ConnectionUtil.getConnection();
 		Statement s = connection.createStatement();
@@ -43,12 +43,12 @@ public class AccountRepositoryJdbc implements AccountRepository {
 
 	@Override
 	public void login() throws SQLException {
-		LOGGER.trace("Entering Logging functionality");
+		// LOGGER.trace("Entering Logging functionality");
 		ResultSet rs = null;
 		Scanner input = new Scanner(System.in);
-		System.out.print("Username: ");
+		System.out.print("Username:");
 		String userNameInput = input.nextLine();
-		System.out.print("Password: ");
+		System.out.print("Password:");
 		String userPassInput = input.nextLine();
 		String sql = "SELECT * FROM ACCOUNT WHERE A_USERNAME = ? AND A_PASSWORD = ?";
 		Connection connection = ConnectionUtil.getConnection();
@@ -118,7 +118,7 @@ public class AccountRepositoryJdbc implements AccountRepository {
 
 	public static boolean newDeposit(String chkUsername, Float userBalance) throws SQLException {
 		try (Connection connection = ConnectionUtil.getConnection()) {
-			System.out.println("printing newDeposit " + userBalance);
+			// System.out.println("printing newDeposit " + userBalance);
 			Scanner input = new Scanner(System.in);
 			System.out.print("Confirm your username to continue: ");
 			chkUsername = input.nextLine();
@@ -135,7 +135,7 @@ public class AccountRepositoryJdbc implements AccountRepository {
 			// System.out.println("Amount Deposited " + userBalance);
 
 			if (statement.executeUpdate() > 0) {
-				System.out.println("Amount Deposited" + userBalance);
+				System.out.println("Amount Deposited " + userBalance);
 				return true;
 			}
 

@@ -20,8 +20,6 @@ public class EvaluationServiceTest {
 
 	/*******************************************************************
 	 * JUNIT TEST 1
-	 * 
-	 * @throws SQLException
 	 ******************************************************************/
 
 	@Test
@@ -34,8 +32,8 @@ public class EvaluationServiceTest {
 	}
 
 	/**********************************************************************
-	 * Test 2
-	 */
+	 *
+	 **********************************************************************/
 
 	@Test
 	public void FailedDepositTest() throws SQLException {
@@ -43,6 +41,30 @@ public class EvaluationServiceTest {
 		Float balance = -100F;
 		boolean expected = false;
 		assertEquals(expected, AccountRepositoryJdbc.newDeposit(username, balance));
+	}
+
+	/*******************************************************************
+	 * JUNIT TEST 2
+	 ******************************************************************/
+	@Test
+	public void withdrawTest() throws SQLException {
+		String username = "saaim";
+		Float balance = 100F;
+		boolean expected = true;
+		assertEquals(expected, AccountRepositoryJdbc.withdraw(username, balance));
+
+	}
+
+	/**********************************************************************
+	 * Test 2
+	 **********************************************************************/
+
+	@Test
+	public void FailedWithdrawTest() throws SQLException {
+		String username = "saaim";
+		Float balance = -100F;
+		boolean expected = true;
+		assertEquals(expected, AccountRepositoryJdbc.withdraw(username, balance));
 	}
 
 }
