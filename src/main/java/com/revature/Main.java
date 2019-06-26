@@ -38,8 +38,9 @@ public class Main {
 					AccountRepository accountRepo = new AccountRepositoryJdbc();
 					accountRepo.create();
 				} catch (SQLException e) {
-					LOGGER.error("account cannot be created", e);
+					LOGGER.error("Account cannot be created", e);
 				}
+				break;
 
 			case '2':
 
@@ -50,10 +51,11 @@ public class Main {
 					// TODO Auto-generated catch block
 					LOGGER.error("login cannot be created", e);
 				}
+				break;
 
 			}
 		} while (selection != '3');
-		System.out.println("See you again");
+		System.out.println("Thank you for choosing us. See you again");
 		scanner.close();
 
 	}

@@ -16,17 +16,4 @@ public interface AccountRepository {
 	public void login() throws SQLException;
 
 	public void deposit() throws SQLException;
-
-	// public Account findByName(String username);
-	// public List<Account> findAll();
-
-	/*
-	 * public boolean create(Account account);
-	 * 
-	 * public boolean createSecure(Account account);
-	 * 
-	 * public Account findByName(String username);
-	 * 
-	 * public List<Account> findAll();
-	 */
 }
